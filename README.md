@@ -9,3 +9,5 @@
 - file database sek program_bpjs.sql
 
 - table login niate sek tabel user
+
+- file database neng wagu/database/program_bpjs.sql
