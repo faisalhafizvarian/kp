@@ -13,7 +13,7 @@ include'koneksi.php';
 						</tr> 
                         <?php
 							$no=1;
-							$query = mysqli_query("SELECT * FROM registrasi_badan_usaha");
+							$query = mysqli_query($koneksi,"SELECT * FROM registrasi_badan_usaha");
 							while ($result = mysqli_fetch_array($query)) {
 
 						?>

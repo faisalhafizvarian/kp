@@ -3,7 +3,7 @@
 $id=$_GET['id'];
 
 $query=("DELETE FROM registrasi_badan_usaha WHERE id='$id'");
-mysqli_query($query);
+mysqli_query($koneksi,$query);
 if ($query == true) {
 	echo "<script>alert('Delete berhasil');</script>";
 } else {

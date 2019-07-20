@@ -21,7 +21,7 @@ include'header.php';
                         <!-- /.panel-heading -->  
 
 <?php 
-		$query_edit	=mysqli_query("SELECT * FROM registrasi_badan_usaha WHERE id='$_GET[id]'");
+		$query_edit	=mysqli_query($koneksi,"SELECT * FROM registrasi_badan_usaha WHERE id='$_GET[id]'");
 		$result_edit=mysqli_fetch_array($query_edit);
 	 ?>
 				<form action="reg_badan_usaha_proses_edit.php" method="POST">

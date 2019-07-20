@@ -10,7 +10,7 @@
 	$ket	 		 = $_POST['ket'];
 
 	$sql	= "INSERT INTO registrasi_badan_usaha VALUES('$id','$nama_bu','$no_reg','$alamat','$no_telp','$nama_penanggung_jawab','$ket')";
-	mysqli_query($sql);
+	mysqli_query($koneksi,$sql);
 
 	header("location: reg_badan_usaha.php");
 ?>

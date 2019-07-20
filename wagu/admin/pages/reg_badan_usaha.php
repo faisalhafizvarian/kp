@@ -83,7 +83,7 @@ if(isset($_POST['submit'])){
     if($_POST['drop']==1){
 //             kosongkan tabel
              $truncate ="TRUNCATE TABLE registrasi_badan_usaha";
-             mysqli_query($truncate);
+             mysqli_query($koneksi,$truncate);
     };
     
 //    import data excel mulai baris ke-2 (karena tabel xls ada header pada baris 1)
@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
 
 //      setelah data dibaca, masukkan ke tabel pegawai sql
       $query = "INSERT into registrasi_badan_usaha (id,nama_bu,no_reg,alamat,no_telp,nama_penanggung_jawab,ket)values('$name','$tmp_name','$alamat','$no_telp','$nama_penanggung_jawab','$ket','$id')";
-      $hasil = mysqli_query($query);
+      $hasil = mysqli_query($koneksi,$query);
       
       flush();
 

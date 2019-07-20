@@ -23,10 +23,10 @@ include'header.php';
 <a class="btn" href="reg_badan_usaha.php"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
 
 <?php
-$id_brg=mysqli_real_escape_string($_GET['id']);
+$id_brg=mysqli_real_escape_string($koneksi,$_GET['id']);
 
 
-$det=mysqli_query("select * from registrasi_badan_usaha where id='$id_brg'")or die(mysqli_error());
+$det=mysqli_query($koneksi,"select * from registrasi_badan_usaha where id='$id_brg'")or die(mysqli_error());
 while($d=mysqli_fetch_array($det)){
 	?>					
 	<table class="table">
